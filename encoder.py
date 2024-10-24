@@ -1,3 +1,11 @@
+#Name: Luke Dutrow
+
+def decode(code):
+    decoded=""
+    for i in range(0,len(code)):
+        decoded += str((int(code[i])+7)%10)
+    return decoded
+
 def encode_password(password):
     if len(password) != 8 or not password.isdigit():
         raise ValueError("Password must be an 8-digit string containing only integers.")
